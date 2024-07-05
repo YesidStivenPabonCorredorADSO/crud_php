@@ -9,7 +9,7 @@
 
 <body>
   <!-- Formulario con metodo post -->
-  <form action="controladores/controlador.php" method="GET">
+  <form action="controladores/controlador.php" method="POST">
     <!-- Campo para el nombre -->
     <div>
       <label for="nombre">Nombre</label>
