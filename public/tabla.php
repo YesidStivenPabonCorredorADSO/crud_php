@@ -2,8 +2,7 @@
 require __DIR__ . ('/../clase/aprendiz.php');
 $aprendiz = new Aprendiz();
 $person=$aprendiz->Listar();
-$prueba=$aprendiz->Eliminar()
-
+var_dump($person)
 ?>
 <table>
   <thead>
@@ -29,7 +28,7 @@ foreach ($person as $key => $value) {
           <input type="hidden" value="<?php echo $value["id"] ?>" name="id">
           <button>Eliminar</button>
         </form>
-        <form action="controladores/editar.php" method="GET">
+        <form action="controladores/edit.php" method="GET">
           <input type="hidden" value="<?php echo $value["id"] ?>" name="id">
           <button>Editar</button>
         </form>

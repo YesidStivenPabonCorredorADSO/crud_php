@@ -13,17 +13,16 @@ require __DIR__ .('/../clase/aprendiz.php');
       $aprendiz->setGenero($genero);
       $aprendiz->setEdad($edad);
       $aprendiz->guardar();
-    } else {
-      echo "No se han proporcionado todos los datos";
-    }
-    header("Location: ../index.php");
+      header("Location: ../index.php");
+    } 
+
   if ($_SERVER['REQUEST_METHOD']=== 'GET') {
-    $id=$_GET('id');
+    $id=$_GET["id"];
     $aprendiz= new Aprendiz();
-    $aprendiz->setId('id');
-    $aprendiz->Elimnar();
+    $aprendiz->setId_usuario($id);
+    $aprendiz->Eliminar();
     header("Location: ../index.php");
-    # code...
+
   }
   // else {
     // if ($_SERVER['REQUEST_METHOD'] === "POST") {

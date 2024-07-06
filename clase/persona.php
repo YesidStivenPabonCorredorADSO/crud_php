@@ -77,11 +77,10 @@ class Persona
   }
   public function Eliminar()
   {
-    $sql="DELETE FROM tb_prueba WHERE id= id;";
-    $stm=$this->connection->prepare($sql);
-    $stm->bindParam(':id_usuario'.$this->id_usuario);
-    $stm->execute();
-    return $stm->fetchAll();
+      $sql = "DELETE FROM tb_prueba WHERE id = :id";
+      $stm = $this->connection->prepare($sql);
+      $stm->bindParam(':id', $this->id_usuario);
+      $stm->execute();
   }
   public function Editar(){
     $sql = "UPDATE tb_prueba SET nombre = :nombre, apellido = :apellido, genero = :genero, edad = :edad";
